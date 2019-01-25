@@ -31,3 +31,9 @@ assets:
     
 ## 3.基本使用在example项目的main.dart已经写明。如有问题提Inssues
 O(∩_∩)O
+
+## 4.PS:当前echart版本4.0.1
+
+## 5.运行效果如图：
+
+![avatar](/image1.png)
