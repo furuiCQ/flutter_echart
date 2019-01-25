@@ -36,4 +36,4 @@ O(∩_∩)O
 
 ## 5.运行效果如图：
 
-![avatar](/image1.png)
+![avatar](image1.png)
