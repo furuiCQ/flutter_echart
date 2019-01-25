@@ -36,4 +36,4 @@ O(∩_∩)O
 
 ## 5.运行效果如图：
 
-![avatar](https://github.com/furuiCQ/flutter_echart/blob/master/image1.png)
+![Image text](https://github.com/furuiCQ/flutter_echart/blob/master/image.png)
