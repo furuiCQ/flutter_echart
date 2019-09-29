@@ -1,4 +1,4 @@
 #import <Flutter/Flutter.h>
 
-@interface FlutterNativeWebPlugin : NSObject<FlutterPlugin>
+@interface FlutterEchartPlugin : NSObject<FlutterPlugin>
 @end
