@@ -61,15 +61,15 @@
         _webView.contentMode = UIViewContentModeScaleAspectFit;
         
         
-        NSString* channelName = [NSString stringWithFormat:@"ponnamkarthik/flutterwebview_%lld", viewId];
+        NSString* channelName = [NSString stringWithFormat:@"flutter_echart_%lld", viewId];
         _channel = [FlutterMethodChannel methodChannelWithName:channelName binaryMessenger:messenger];
         
-        //    channelName = [NSString stringWithFormat:@"ponnamkarthik/flutterwebview_stream_pagestart_%lld", viewId];
-        //
-        //    onPageStartEvenetChannel=[FlutterEventChannel eventChannelWithName:channelName binaryMessenger:messenger];
-        //    [onPageStartEvenetChannel setStreamHandler:self];
-        //
-        channelName = [NSString stringWithFormat:@"ponnamkarthik/flutterwebview_stream_pagefinish_%lld", viewId];
+        channelName = [NSString stringWithFormat:@"flutter_echart_stream_pagestart_%lld", viewId];
+
+        onPageStartEvenetChannel=[FlutterEventChannel eventChannelWithName:channelName binaryMessenger:messenger];
+        [onPageStartEvenetChannel setStreamHandler:self];
+
+        channelName = [NSString stringWithFormat:@"flutter_echart_stream_pagefinish_%lld", viewId];
         
         _onPageFinishEvenetChannel=[FlutterEventChannel eventChannelWithName:channelName binaryMessenger:messenger];
         [_onPageFinishEvenetChannel setStreamHandler:self];
