@@ -58,7 +58,7 @@ class WebController {
       init(int id) {
         _channel = new MethodChannel('flutter_echart_$id');
         _pageFinsihed = EventChannel('flutter_echart_stream_pagefinish_$id');
-        //_pageStarted = EventChannel('flutter_echart_stream_pagestart_$id');
+//        _pageStarted = EventChannel('flutter_echart_stream_pagestart_$id');
       }
 
   MethodChannel _channel;

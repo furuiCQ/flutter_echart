@@ -37,3 +37,7 @@ O(∩_∩)O
 ## 5.运行效果如图：
 
 ![Image text](https://github.com/furuiCQ/flutter_echart/blob/master/image.png)
+
+## 6.补充一点，iOS需要在info.plist中添加键值对
+<key>io.flutter.embedded_views_preview</key>
+<true/>
