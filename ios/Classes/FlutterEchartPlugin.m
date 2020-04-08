@@ -1,7 +1,7 @@
 #import "FlutterEchartPlugin.h"
 #import "FlutterWebView.h"
 
-@implementation FlutterNativeWebPlugin
+@implementation FlutterEchartPlugin
 
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
   FlutterNativeWebFactory* webviewFactory =
