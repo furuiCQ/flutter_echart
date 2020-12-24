@@ -1,29 +1,34 @@
-import 'dart:async';
-
 import 'package:flutter/services.dart';
 
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'flutter_native_web.dart';
+
 //Echarts
-class EchartView extends StatelessWidget {
+class EchartView extends StatefulWidget {
   EchartView({Key key, this.height, this.data, this.child}) : super(key: key);
   final Map data;
   final double height;
   final Widget child;
 
   @override
+  _EchartViewState createState() => _EchartViewState();
+}
+
+class _EchartViewState extends State<EchartView> {
+  @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return Container(
-      height: height,
+      height: widget.height,
       color: Colors.white,
-      child: Echarts(data: data, child: child),
+      child: Echarts(data: widget.data, child: widget.child),
     );
   }
 }
 
 class Echarts extends StatefulWidget {
-  Echarts({this.data, this.child});
+  Echarts({Key key, this.data, this.child}) : super(key: key);
 
   final Widget child;
 
@@ -34,7 +39,6 @@ class Echarts extends StatefulWidget {
 }
 
 class _EchartsState extends State<Echarts> {
-
   WebController webController;
 
   bool finished = false;
@@ -67,16 +71,12 @@ class _EchartsState extends State<Echarts> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-        overflow: Overflow.clip,
-        children: <Widget>[
-          widget.child ??
-              const Center(child: const CircularProgressIndicator()),
-          AnimatedOpacity(
-              duration: Duration(milliseconds: 300),
-              opacity: finished ? 1.0 : 0.0,
-              child: FlutterNativeWeb(
-                  onWebCreated: onWebCreated))
-        ]);
+    return Stack(overflow: Overflow.clip, children: <Widget>[
+      widget.child ?? const Center(child: const CircularProgressIndicator()),
+      AnimatedOpacity(
+          duration: Duration(milliseconds: 300),
+          opacity: finished ? 1.0 : 0.0,
+          child: FlutterNativeWeb(onWebCreated: onWebCreated))
+    ]);
   }
 }
