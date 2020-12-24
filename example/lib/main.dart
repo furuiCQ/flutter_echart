@@ -6,7 +6,6 @@ import 'package:flutter_echart/flutter_echart.dart';
 
 void main() => runApp(MyApp());
 
-
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => new _MyAppState();
@@ -33,7 +32,19 @@ class _MyAppState extends State<MyApp> {
         }
       ]
     };
-
+    var option2 = {
+      "xAxis": {
+        "type": "category",
+        "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+      },
+      "yAxis": {"type": "value"},
+      "series": [
+        {
+          "data": [820, 932, 901, 934, 1290, 1330, 1320],
+          "type": "line"
+        }
+      ]
+    };
     return new MaterialApp(
       home: new Scaffold(
           appBar: new AppBar(
@@ -45,6 +56,12 @@ class _MyAppState extends State<MyApp> {
                 new Text('Native WebView as Widget\n\n'),
                 new Container(
                   child: EchartView(height: 300, data: option),
+                  height: 300.0,
+                  width: 500.0,
+                ),
+                new Text('Native WebView as Widget  2\n\n'),
+                new Container(
+                  child: EchartView(height: 300, data: option2),
                   height: 300.0,
                   width: 500.0,
                 ),
