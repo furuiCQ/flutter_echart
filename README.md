@@ -44,3 +44,33 @@ O(∩_∩)O
 这里先道个歉，2年里面有很多变故，项目也就没有维护了，为了感谢曾经的这个34个star和18个fork，
 近期将会花时间重新把这个项目维护起来，感谢大家。ღ( ´･ᴗ･` )比心
 
+### 新增刷新功能。代码如下
+
+```java
+    //创建一个Provider
+    CounterProvider _counterProvider = new CounterProvider();
+  //在EchartView外面套一个ChangeNotifierProvider
+    ChangeNotifierProvider(
+                    builder: (context) => _counterProvider,
+                    child: Consumer(builder: (BuildContext context,
+                        CounterProvider counterProvider, Widget child) {
+                      print('EchartView。。。。。。');
+                      return new Container(
+                        child: EchartView(
+                            key: _counterProvider.keyCount,
+                            height: 300,
+                            data: counterProvider.value),
+                        height: 300.0,
+                        width: 500.0,
+                      );
+                    })),
+   //刷新数据功能
+   Builder(builder: (context) {
+                     return RaisedButton(
+                       child: Text("更改数据2"),
+                       onPressed: () {
+                         _counterProvider2.refresh(UniqueKey(), option);
+                       },
+                     );
+                   }),
+```
