@@ -37,3 +37,10 @@ O(∩_∩)O
 ## 5.运行效果如图：
 
 ![Image text](https://github.com/furuiCQ/flutter_echart/blob/master/image.png)
+
+## --2020年12月24日----
+
+没想到时隔有两年多，获得了34个star，非常感谢star的朋友。
+这里先道个歉，2年里面有很多变故，项目也就没有维护了，为了感谢曾经的这个34个star和18个fork，
+近期将会花时间重新把这个项目维护起来，感谢大家。ღ( ´･ᴗ･` )比心
+
