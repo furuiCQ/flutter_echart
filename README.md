@@ -44,7 +44,7 @@ O(∩_∩)O
 
 ## 5.运行效果如图：
 
-![Image text](https://img-blog.csdnimg.cn/20201225140124303.gif)
+<img src="https://img-blog.csdnimg.cn/20201225140124303.gif" width="50%">
 
 ## --2020年12月24日----
 
