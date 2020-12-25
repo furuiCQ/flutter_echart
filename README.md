@@ -13,15 +13,14 @@ For help getting started with Flutter, view our
 [online documentation](https://flutter.io/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
 
-##About Echart
+## About Echart
 Apache ecarts (increasing) TM is a project in the incubation of Apache Software Foundation (ASF).
 
 Apache ECharts (incubating)TM 是一个正在 Apache Software Foundation (ASF) 孵化中的项目。
 
 Echart: https://echarts.apache.org/examples/zh/index.html
 
-用于web端显示各种类型的图表。
-
+Echart本身用于web端显示各种类型的图表。
 
 ## 1.如何引用
 
